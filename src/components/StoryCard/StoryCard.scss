@@ -1,0 +1,15 @@
+.story_card {
+  height: 6.5rem;
+  width: 6.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 1.9rem;
+  border: 2px solid #0659fd;
+  &_avatar {
+    height: 5.4rem;
+    width: 5.4rem;
+    border-radius: 1.4rem;
+    background-color: lightgray;
+  }
+}

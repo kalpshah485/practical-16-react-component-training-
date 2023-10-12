@@ -4,7 +4,7 @@
   display: flex;
 }
 
-.right_sidebar {
+.left_sidebar {
   background-color: $primary-color;
   width: 16.5rem;
   height: 100vh;
@@ -50,4 +50,95 @@
 
 .navigation_logo_wrapper.active {
   background: #fff;
+}
+
+.home_main {
+  margin: 4rem 3rem 0 6.5rem;
+  width: 76rem;
+  .card {
+    border-radius: 1.2rem;
+    background-color: #fff;
+  }
+  .search_bar {
+    display: flex;
+    align-items: center;
+    // width: 76rem;
+    height: 5.8rem;
+    padding-left: 2rem;
+    padding-right: 3rem;
+    margin-bottom: 4rem;
+    .search_logo {
+      margin-right: 1.5rem;
+    }
+    input {
+      height: 2rem;
+      width: 54.8rem;
+      border: none;
+      outline: none;
+      margin-right: 7.7rem;
+    }
+    .filters_label {
+      color: #8f92a1;
+      font-size: 1.2rem;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 2rem; /* 166.667% */
+      letter-spacing: 0.1rem;
+    }
+  }
+  .featured_stories {
+    height: 19.3rem;
+    overflow: hidden;
+    padding: 3rem 0rem 3.4rem 3rem;
+    &_head {
+      height: 3rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-right: 3rem;
+      margin-bottom: 3.4rem;
+      .featured_stories_label {
+        font-size: 2.2rem;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 3rem;
+      }
+      .see_more {
+        width: 9.7rem;
+        height: inherit;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        font-family: SF Pro Display;
+        border: none;
+        &_text {
+          font-family: SF Pro Display;
+          font-size: 1.4rem;
+          font-style: normal;
+          font-weight: 500;
+          line-height: 2rem;
+        }
+      }
+    }
+    &_bar {
+      height: 6.5rem;
+      width: 74rem;
+      display: flex;
+      gap: 2rem;
+      align-items: center;
+      margin-left: 1rem;
+      justify-content: flex-start;
+      flex-shrink: 0;
+      .plus_icon {
+        height: 4.5rem;
+        width: 4.5rem;
+        border-radius: 1.2rem;
+        background-color: rgba(121, 208, 241, 0.2);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-right: 1rem;
+      }
+    }
+  }
 }
