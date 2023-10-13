@@ -8,6 +8,7 @@ import LogoutLogo from "../assets/navigation-logos/Logout.svg";
 import SearchLogo from "../assets/Search.svg";
 import ArrowRight from "../assets/Arrow-Right.svg";
 import PlusIcon from "../assets/Plus.svg";
+import ProfilePhoto from "../assets/ProfilePhoto.png";
 import storyUser1 from "../assets/storyUsers/storyUser1.png";
 import storyUser2 from "../assets/storyUsers/storyUser2.png";
 import storyUser3 from "../assets/storyUsers/storyUser3.png";
@@ -16,12 +17,39 @@ import storyUser5 from "../assets/storyUsers/storyUser5.jpeg";
 import storyUser6 from "../assets/storyUsers/storyUser6.jpeg";
 import storyUser7 from "../assets/storyUsers/storyUser7.jpeg";
 import storyUser8 from "../assets/storyUsers/storyUser8.jpeg";
+import OptionsLogo from "../assets/Options.svg";
+import Camera from "../assets/Camera.svg";
+import Video from "../assets/Video-Camera.svg";
+import PlusGray from "../assets/PlusGray.svg";
+import PostProfileImage from "../assets/PostProfileImage.png";
+import PostImage1 from "../assets/post-images/PostImage1.png";
+import PostImage2 from "../assets/post-images/PostImage2.png";
+import PostImage3 from "../assets/post-images/PostImage3.png";
+import PostImage4 from "../assets/post-images/PostImage4.png";
+import PostImage5 from "../assets/post-images/PostImage5.png";
+import LikeLogo from "../assets/Like.svg";
+import CommentLogo from "../assets/Comment.svg";
+import ShareLogo from "../assets/Share.svg";
+import CameraBlack from "../assets/Camera_black.svg";
+import ProfilePic from "../assets/ProfilePic.png";
 
 export const images = {
   logo: Logo,
   searchLogo: SearchLogo,
   rightArrow: ArrowRight,
   plusIcon: PlusIcon,
+  profilePhoto: ProfilePhoto,
+  profilePic: ProfilePic,
+  optionsLogo: OptionsLogo,
+  cameraLogo: Camera,
+  cameraBlackLogo: CameraBlack,
+  videoLogo: Video,
+  plusGray: PlusGray,
+  postProfileImage: PostProfileImage,
+  logout: LogoutLogo,
+  likeLogo: LikeLogo,
+  commentLogo: CommentLogo,
+  shareLogo: ShareLogo,
   navigation: {
     home: HomeLogo,
     calender: CalendarLogo,
@@ -39,5 +67,11 @@ export const images = {
     user7: storyUser7,
     user8: storyUser8,
   },
-  logout: LogoutLogo,
+  postImages: {
+    postImage1: PostImage1,
+    postImage2: PostImage2,
+    postImage3: PostImage3,
+    postImage4: PostImage4,
+    postImage5: PostImage5,
+  },
 };

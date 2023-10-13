@@ -1,0 +1,15 @@
+.see_more {
+  width: 9.7rem;
+  height: 3rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border: none;
+  &_text {
+    font-family: SF Pro Display;
+    font-size: 1.4rem;
+    font-weight: 500;
+    line-height: 2rem;
+  }
+}
+
