@@ -1,60 +1,35 @@
 import "./Home.scss";
-import { images } from "../config/images";
-import StoryCard from "../components/StoryCard/StoryCard";
-import LeftIndicator from "../components/LeftIndicator/LeftIndicator";
-import SeeMoreBtn from "../components/SeeMoreBtn/SeeMoreBtn";
-import Oval from "../components/Oval/Oval";
+import { images } from "../../config/images";
+import StoryCard from "../../components/StoryCard/StoryCard";
+import LeftIndicator from "../../components/LeftIndicator/LeftIndicator";
+import SeeMoreBtn from "../../components/SeeMoreBtn/SeeMoreBtn";
+import Oval from "../../components/Oval/Oval";
+import RightArrow from "../../components/RightArrow/RightArrow";
+import AddFrdSvg from "../../components/AddFrdSvg/AddFrdSvg";
+import TickSvg from "../../components/TickSvg/TickSvg";
+import LeftSidebar from "../../components/LeftSidebar/LeftSidebar";
 
 const Home = () => {
+  const users = [
+    {
+      name: "Cammy Hedling",
+      address: "Los Angeles, CA",
+      profileImage: images.profilePhoto,
+    },
+    {
+      name: "Cammy Hedling",
+      address: "Los Angeles, CA",
+      profileImage: images.profilePhoto,
+    },
+    {
+      name: "Cammy Hedling",
+      address: "Los Angeles, CA",
+      profileImage: images.profilePhoto,
+    },
+  ];
   return (
     <div className="home_layout">
-      <div className="left_sidebar">
-        <div className="logo">
-          <img src={images.logo} alt="Logo" />
-        </div>
-        <div className="navigation">
-          <div className="navigation_logo_wrapper active">
-            <img
-              className="nav_logo"
-              src={images.navigation.home}
-              alt="Home Logo"
-            />
-          </div>
-          <div className="navigation_logo_wrapper">
-            <img
-              className="nav_logo"
-              src={images.navigation.calender}
-              alt="Calender Logo"
-            />
-          </div>
-          <div className="navigation_logo_wrapper">
-            <img
-              className="nav_logo"
-              src={images.navigation.message}
-              alt="Message Logo"
-            />
-          </div>
-          <div className="navigation_logo_wrapper">
-            <img
-              className="nav_logo"
-              src={images.navigation.user}
-              alt="User Logo"
-            />
-          </div>
-          <div className="navigation_logo_wrapper">
-            <img
-              className="nav_logo"
-              src={images.navigation.settings}
-              alt="Settings Logo"
-            />
-          </div>
-        </div>
-        <div className="logout_wrapper">
-          <div className="navigation_logo_wrapper logout">
-            <img src={images.logout} alt="Logout Logo" />
-          </div>
-        </div>
-      </div>
+      <LeftSidebar />
       <div className="home_main">
         <div className="search_bar card">
           <img
@@ -75,8 +50,14 @@ const Home = () => {
               <img src={images.plusIcon} alt="Plus Icon" />
             </div>
             {Object.values(images.storyUsers).map((src, index) => {
-              return <StoryCard src={src} key={index} />;
+              return <StoryCard watched={index === 2} src={src} key={index} />;
             })}
+            <StoryCard src={images.storyUsers.user8} key={99} />
+            <StoryCard src={images.storyUsers.user8} key={100} />
+            <StoryCard src={images.storyUsers.user8} key={101} />
+            <StoryCard src={images.storyUsers.user8} key={102} />
+            <StoryCard src={images.storyUsers.user8} key={103} />
+            <StoryCard src={images.storyUsers.user8} key={104} />
           </div>
         </div>
         <div className="new_post card mb-3">
@@ -235,6 +216,49 @@ const Home = () => {
                 radius="13.85rem"
                 fill="#79D0F1"
               />
+            </div>
+          </div>
+          <div className="who_to_follow">
+            <div className="title">Who to Follow</div>
+            <div className="recommend_follow">
+              {users.map(({ address, name, profileImage }) => {
+                return (
+                  <div className="user">
+                    <img
+                      className="profile_pic"
+                      src={profileImage}
+                      alt="profile pic"
+                    />
+                    <div className="name_address">
+                      <div className="name">{name}</div>
+                      <div className="address">{address}</div>
+                    </div>
+                    <div className="add_frd_btn">
+                      <AddFrdSvg />
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
+            <div className="see_more">
+              <div className="see_more_text">SEE MORE</div>
+              <RightArrow />
+            </div>
+          </div>
+          <div className="friends">
+            <div className="title">Friends</div>
+            <div className="users">
+              {images.friends.map((val) => {
+                return (
+                  <div className="user">
+                    <img className="profile_pic" src={val} alt="profile pic" />
+                    <div className="name">MadeInAmerica</div>
+                    <div className="tick_btn">
+                      <TickSvg />
+                    </div>
+                  </div>
+                );
+              })}
             </div>
           </div>
         </div>

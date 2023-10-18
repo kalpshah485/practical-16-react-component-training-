@@ -32,6 +32,9 @@ import CommentLogo from "../assets/Comment.svg";
 import ShareLogo from "../assets/Share.svg";
 import CameraBlack from "../assets/Camera_black.svg";
 import ProfilePic from "../assets/ProfilePic.png";
+import User1 from "../assets/friends/User1.png";
+import User2 from "../assets/friends/User2.png";
+import User3 from "../assets/friends/User3.png";
 
 export const images = {
   logo: Logo,
@@ -74,4 +77,5 @@ export const images = {
     postImage4: PostImage4,
     postImage5: PostImage5,
   },
+  friends: [User1, User2, User3],
 };

@@ -1,60 +1,13 @@
-@import "../styles/variables";
+@import "../../styles/variables";
 
 .home_layout {
   display: flex;
-}
-
-.left_sidebar {
-  background-color: $primary-color;
-  width: 16.5rem;
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding-top: 4.2rem;
-  padding-bottom: 6rem;
-}
-
-.logo {
-  width: 4.8rem;
-  height: 5.4rem;
-  margin-bottom: 9.8rem;
-}
-
-.navigation {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  gap: 4rem;
-}
-
-.navigation_logo_wrapper {
-  width: 4.8rem;
-  height: 4.8rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 1.2rem;
-  background-color: #ffffff33;
-}
-
-.navigation_logo_wrapper.logout {
-  background-color: transparent;
-  border: 2px solid rgba(255, 255, 255, 0.2);
-}
-
-.logout_wrapper {
-  margin-top: auto;
-  margin-bottom: 0;
-}
-
-.navigation_logo_wrapper.active {
-  background: #fff;
+  width: 100vw;
 }
 
 .home_main {
   margin: 0 3rem 0 6.5rem;
-  width: 76rem;
+  width: 100vw;
   height: 100vh;
   padding-top: 4rem;
   overflow: auto;
@@ -80,17 +33,19 @@
       width: 54.8rem;
       border: none;
       outline: none;
-      margin-right: 7.7rem;
     }
     .filters_label {
       color: #8f92a1;
       font-size: 1.2rem;
       font-style: normal;
       font-weight: 700;
-      line-height: 2rem; /* 166.667% */
+      line-height: 2rem;
       letter-spacing: 0.1rem;
+      margin-right: 0;
+      margin-left: auto;
     }
   }
+
   .featured_stories {
     height: 19.3rem;
     overflow: hidden;
@@ -117,10 +72,9 @@
       align-items: center;
       margin-left: 1rem;
       justify-content: flex-start;
-      flex-shrink: 0;
       .plus_icon {
         height: 4.5rem;
-        width: 4.5rem;
+        min-width: 4.5rem;
         border-radius: 1.2rem;
         background-color: rgba(121, 208, 241, 0.2);
         display: flex;
@@ -130,6 +84,7 @@
       }
     }
   }
+
   .new_post {
     padding: 3rem;
     height: 23.6rem;
@@ -146,6 +101,7 @@
         .user_profile_photo {
           height: 3.8rem;
           width: 3.8rem;
+          border-radius: 1.2rem;
         }
         .post_input {
           color: #8f92a1;
@@ -171,7 +127,7 @@
           display: flex;
           align-items: center;
           justify-content: center;
-          border-radius: 1.8rem;
+          border-radius: 1.2rem;
           background-color: #f7f7f7;
           img {
             height: 1.8rem;
@@ -192,6 +148,7 @@
       }
     }
   }
+
   .feed_post {
     padding: 3rem;
     .top {
@@ -241,16 +198,16 @@
       height: 30.5rem;
       margin-bottom: 4rem;
       position: relative;
-      .img {
-        width: 16rem;
+      .img:not(.post_image1) {
+        width: inherit;
         height: 14.5rem;
         border-radius: 0.8rem;
       }
       .post_image1 {
         grid-row: 1 / span 2;
         grid-column: 1 / span 2;
-        width: 35rem;
-        height: 30.5rem;
+        width: inherit;
+        height: inherit;
       }
       .more_posts {
         position: absolute;
@@ -334,6 +291,8 @@
   height: 100vh;
   justify-content: flex-end;
   align-items: center;
+  margin-left: auto;
+  margin-right: 0;
   .right_panel {
     width: 40rem;
     height: 100vh;
@@ -341,12 +300,13 @@
     border-radius: 3.2rem 0rem 0rem 3.2rem;
     background: #1e1f20;
     color: #fff;
+    overflow: hidden;
     .profile_notifications {
       height: 4.8rem;
       display: flex;
       gap: 2rem;
       justify-content: flex-end;
-      margin-bottom: 4.5rem;
+      margin-bottom: 4rem;
       .profile_pic {
         height: inherit;
         border-radius: 1.2rem;
@@ -372,7 +332,7 @@
       background: #ff4e4e;
       padding: 2rem 0rem 2rem 2rem;
       overflow: hidden;
-      margin-bottom: 6rem;
+      margin-bottom: 5rem;
       .premium_card_wrapper {
         position: absolute;
         z-index: 20;
@@ -403,6 +363,132 @@
         position: absolute;
         top: 8.2rem;
         left: 15rem;
+      }
+    }
+    .who_to_follow {
+      margin-bottom: 5rem;
+      .title {
+        font-family: SF Pro Display;
+        font-size: 2.2rem;
+        font-weight: 700;
+        line-height: 3rem;
+        margin-bottom: 3.5rem;
+      }
+      .recommend_follow {
+        display: flex;
+        flex-direction: column;
+        gap: 3rem;
+        margin-bottom: 3.8rem;
+        .user {
+          display: flex;
+          align-items: center;
+          .profile_pic {
+            height: 3.8rem;
+            width: 3.8rem;
+            border-radius: 1.2rem;
+            margin-right: 1rem;
+          }
+          .name_address {
+            .name {
+              font-family: SF Pro Display;
+              font-size: 1.4rem;
+              font-weight: 700;
+              line-height: 2rem;
+            }
+            .address {
+              font-family: SF Pro Display;
+              font-size: 1.2rem;
+              font-weight: 400;
+              line-height: 2rem;
+            }
+          }
+          .add_frd_btn {
+            border-radius: 0.8rem;
+            width: 2.8rem;
+            height: 2.8rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-right: 0;
+            margin-left: auto;
+            background-color: #0659fd;
+          }
+        }
+      }
+      .see_more {
+        display: inline-flex;
+        gap: 0.5rem;
+        width: 9rem;
+        height: 2rem;
+        justify-content: space-between;
+        align-items: center;
+        &_text {
+          color: #8f92a1;
+          font-family: SF Pro Display;
+          font-size: 1.2rem;
+          font-weight: 700;
+          line-height: 2rem; /* 166.667% */
+          letter-spacing: 0.1rem;
+          text-transform: uppercase;
+        }
+      }
+    }
+    .friends {
+      .title {
+        font-family: SF Pro Display;
+        font-size: 2.2rem;
+        font-weight: 700;
+        line-height: 3rem;
+        margin-bottom: 3.5rem;
+      }
+      .users {
+        display: flex;
+        flex-direction: column;
+        gap: 3rem;
+        .user {
+          display: flex;
+          align-items: center;
+          .profile_pic {
+            height: 3.8rem;
+            width: 3.8rem;
+            border-radius: 1.2rem;
+            margin-right: 1rem;
+          }
+          .name {
+            font-family: SF Pro Display;
+            font-size: 1.4rem;
+            font-weight: 500;
+            line-height: 2rem;
+          }
+          .tick_btn {
+            margin-right: 0;
+            margin-left: auto;
+            height: 2.8rem;
+            width: 2.8rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 0.8rem;
+            background-color: rgba(255, 255, 255, 0.2);
+            svg {
+              height: 1.4rem;
+              width: 1.4rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1441px) {
+  .home_main {
+    .feed_post {
+      .photos {
+        height: 39rem;
+        .img:not(.post_image1){
+          height: 18.75rem;
+        }
       }
     }
   }
