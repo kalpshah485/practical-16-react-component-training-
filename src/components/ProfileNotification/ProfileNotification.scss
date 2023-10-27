@@ -1,0 +1,23 @@
+.profile_notifications {
+  height: 4.8rem;
+  display: flex;
+  gap: 2rem;
+  justify-content: flex-end;
+  margin-bottom: 4rem;
+  .profile_pic {
+    height: inherit;
+    border-radius: 1.2rem;
+  }
+  .notification {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.8rem;
+    font-weight: 700;
+    line-height: 2rem;
+    border-radius: 1.2rem;
+    width: 4.8rem;
+    height: inherit;
+    background-color: #79d0f1;
+  }
+}

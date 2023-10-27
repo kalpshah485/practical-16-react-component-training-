@@ -1,0 +1,294 @@
+@import "../../styles/variables";
+
+.bg_blue {
+  background-color: $primary-color;
+}
+.home_layout {
+  display: flex;
+  align-items: center;
+  .main_panel {
+    border-radius: 3.2rem 0rem 0rem 3.2rem;
+    margin-left: 1rem;
+    // display: flex;
+    height: 100vh;
+    width: 100vw;
+    background-color: #ffffff;
+    padding: 4rem 9rem 6.2rem 8rem;
+    overflow: auto;
+    .back_btn {
+      width: 10.3rem;
+      height: 5.8rem;
+      padding: 2rem;
+      border: none;
+      border-radius: 1.2rem;
+      background-color: #f7f7f7;
+      margin-bottom: 4rem;
+      &_content {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        &_text {
+          font-family: SF Pro Display;
+          font-size: 1.4rem;
+          font-weight: 700;
+          line-height: 2rem;
+          color: #8f92a1;
+        }
+      }
+    }
+    .user_options {
+      display: flex;
+      align-items: center;
+      margin-bottom: 4rem;
+      .user_wrapper {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        .profile_pic {
+          display: flex;
+          width: 4.8rem;
+          height: 4.8rem;
+          justify-content: center;
+          align-items: center;
+          border-radius: 1.2rem;
+        }
+        .username_time {
+          .username {
+            color: #1e1f20;
+            font-family: SF Pro Display;
+            font-size: 1.4rem;
+            font-weight: 500;
+            line-height: 2rem;
+          }
+          .time {
+            color: #8f92a1;
+            font-family: SF Pro Display;
+            font-size: 1.2rem;
+            font-weight: 400;
+            line-height: 2rem;
+          }
+        }
+      }
+      .options {
+        margin-left: auto;
+        margin-right: 0;
+        display: flex;
+        gap: 1.5rem;
+        .share_btn {
+          height: 3rem;
+          display: flex;
+          align-items: center;
+          gap: 0.5rem;
+          padding: 0 0.8rem;
+          .share_text {
+            color: #1e1f20;
+            font-family: SF Pro Display;
+            font-size: 1.4rem;
+            font-weight: 500;
+            line-height: 2rem;
+          }
+        }
+        .interested_btn {
+          border-radius: 0.4rem;
+          background-color: #53d769;
+          display: flex;
+          align-items: center;
+          gap: 0.7rem;
+          padding: 0 0.8rem;
+          height: 3rem;
+          .interested {
+            color: #fff;
+            font-family: SF Pro Display;
+            font-size: 1.4rem;
+            font-weight: 500;
+            line-height: 2rem;
+          }
+        }
+        .three_dots {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+      }
+    }
+    .event_photo {
+      border-radius: 0.8rem;
+      height: 33rem;
+      width: -webkit-fill-available;
+      margin-bottom: 4rem;
+    }
+    .flex2_container {
+      display: grid;
+      align-items: center;
+      grid-template-columns: 1fr 1fr;
+      margin-bottom: 4rem;
+      .flex_container {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        .svg_container {
+          height: 4.8rem;
+          width: 4.8rem;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          border-radius: 1.2rem;
+          background-color: #f7f7f7;
+        }
+        .text_container {
+          .primary_text {
+            color: #1e1f20;
+            font-family: SF Pro Display;
+            font-size: 1.4rem;
+            font-weight: 700;
+            line-height: 2rem;
+          }
+          .secondary_text {
+            color: #8f92a1;
+            font-family: SF Pro Display;
+            font-size: 1.2rem;
+            font-weight: 400;
+            line-height: 2rem;
+          }
+        }
+      }
+    }
+    .event_name {
+      color: #1e1f20;
+      font-family: SF Pro Display;
+      font-size: 3rem;
+      font-weight: 700;
+      line-height: 3.6rem;
+      margin-bottom: 3rem;
+    }
+    .event_desc_title {
+      color: #1e1f20;
+      font-family: SF Pro Display;
+      font-size: 1.6rem;
+      font-weight: 700;
+      line-height: 2.2rem;
+      margin-bottom: 2rem;
+    }
+    .event_description {
+      color: #8f92a1;
+      font-family: SF Pro Display;
+      font-size: 1.4rem;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 2.2rem;
+      margin-bottom: 4rem;
+    }
+    .tags {
+      display: flex;
+      gap: 1rem;
+    }
+  }
+  .main_panel::-webkit-scrollbar {
+    display: none;
+  }
+  .left_indicator {
+    height: 100vh;
+    min-width: 0.5rem;
+    display: flex;
+    align-items: center;
+  }
+  .white_right_panel {
+    background-color: #ffffff;
+    .address_location {
+      margin-bottom: 4.5rem;
+      .title {
+        margin-bottom: 3rem;
+      }
+      .address_map {
+        width: 100%;
+        height: 24rem;
+        border-radius: 0.8rem;
+        margin-bottom: 3rem;
+      }
+      .address_bottom {
+        display: flex;
+        gap: 1rem;
+        align-items: center;
+        .map_icon {
+          height: 4.8rem;
+          width: 4.8rem;
+          background-color: rgba(255, 255, 255, 0.2);
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          border-radius: 1.2rem;
+        }
+        .address {
+          .first {
+            color: #fff;
+            font-family: SF Pro Display;
+            font-size: 1.4rem;
+            font-weight: 700;
+            line-height: 2rem;
+          }
+          .second {
+            color: #8f92a1;
+            font-family: SF Pro Display;
+            font-size: 1.2rem;
+            font-weight: 400;
+            line-height: 2rem;
+          }
+        }
+        .direction_btn {
+          width: 8.2rem;
+          height: 3rem;
+          padding: 0;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          font-family: SF Pro Display;
+          font-size: 1.4rem;
+          font-weight: 500;
+          line-height: 2rem;
+          border-radius: 0.2rem;
+          border: 2px solid rgba(143, 146, 161, 0.6);
+          background-color: transparent;
+          color: #fff;
+          margin-left: auto;
+          margin-right: 0;
+        }
+      }
+    }
+    .friends {
+      .title {
+        margin-bottom: 3rem;
+      }
+      .users {
+        .user {
+          .tick_btn {
+            background-color: #53d769;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1401px) {
+  .home_layout {
+    .main_panel {
+      padding: 4rem 11rem 6.2rem 9rem;
+    }
+  }
+}
+
+@media screen and (min-width: 1651px) {
+  .home_layout {
+    .main_panel {
+      padding: 4rem 13rem 6.2rem 10rem;
+    }
+  }
+}
+
+@media screen and (min-width: 1851px) {
+  .home_layout {
+    .main_panel {
+      padding: 4rem 16rem 6.2rem 12rem;
+    }
+  }
+}

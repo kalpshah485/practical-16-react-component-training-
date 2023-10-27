@@ -139,7 +139,7 @@
         width: 12.1rem;
         height: 5.8rem;
         color: #fff;
-        background-color: #0659fd;
+        background-color: $primary-color;
         border-radius: 1.2rem;
         text-align: center;
         font-size: 1.4rem;
@@ -284,46 +284,7 @@
 }
 
 .home_right_panel {
-  padding-left: 0.5rem;
-  display: flex;
-  gap: 1rem;
-  width: 42rem;
-  height: 100vh;
-  justify-content: flex-end;
-  align-items: center;
-  margin-left: auto;
-  margin-right: 0;
   .right_panel {
-    width: 40rem;
-    height: 100vh;
-    padding: 4.5rem 4rem 4rem 4.5rem;
-    border-radius: 3.2rem 0rem 0rem 3.2rem;
-    background: #1e1f20;
-    color: #fff;
-    overflow: hidden;
-    .profile_notifications {
-      height: 4.8rem;
-      display: flex;
-      gap: 2rem;
-      justify-content: flex-end;
-      margin-bottom: 4rem;
-      .profile_pic {
-        height: inherit;
-        border-radius: 1.2rem;
-      }
-      .notification {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        font-size: 1.8rem;
-        font-weight: 700;
-        line-height: 2rem;
-        border-radius: 1.2rem;
-        width: 4.8rem;
-        height: inherit;
-        background-color: #79d0f1;
-      }
-    }
     .premium_card {
       width: 31.5rem;
       height: 17.4rem;
@@ -368,10 +329,6 @@
     .who_to_follow {
       margin-bottom: 5rem;
       .title {
-        font-family: SF Pro Display;
-        font-size: 2.2rem;
-        font-weight: 700;
-        line-height: 3rem;
         margin-bottom: 3.5rem;
       }
       .recommend_follow {
@@ -411,7 +368,7 @@
             align-items: center;
             margin-right: 0;
             margin-left: auto;
-            background-color: #0659fd;
+            background-color: $primary-color;
           }
         }
       }
@@ -435,10 +392,6 @@
     }
     .friends {
       .title {
-        font-family: SF Pro Display;
-        font-size: 2.2rem;
-        font-weight: 700;
-        line-height: 3rem;
         margin-bottom: 3.5rem;
       }
       .users {
@@ -483,13 +436,29 @@
 
 @media screen and (min-width: 1441px) {
   .home_main {
+    margin-left: 9rem;
+    margin-right: 6rem;
     .feed_post {
       .photos {
         height: 39rem;
-        .img:not(.post_image1){
+        .img:not(.post_image1) {
           height: 18.75rem;
         }
       }
     }
+  }
+}
+
+@media screen and (min-width: 1601px) {
+  .home_main {
+    margin-left: 11rem;
+    margin-right: 8rem;
+  }
+}
+
+@media screen and (min-width: 1801px) {
+  .home_main {
+    margin-left: 15rem;
+    margin-right: 11rem;
   }
 }

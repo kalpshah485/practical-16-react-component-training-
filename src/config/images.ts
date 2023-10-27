@@ -35,6 +35,8 @@ import ProfilePic from "../assets/ProfilePic.png";
 import User1 from "../assets/friends/User1.png";
 import User2 from "../assets/friends/User2.png";
 import User3 from "../assets/friends/User3.png";
+import EventPhoto from "../assets/EventPhoto.png";
+import MapImage from '../assets/MapImage.png'
 
 export const images = {
   logo: Logo,
@@ -53,6 +55,8 @@ export const images = {
   likeLogo: LikeLogo,
   commentLogo: CommentLogo,
   shareLogo: ShareLogo,
+  eventPhoto: EventPhoto,
+  mapImage: MapImage,
   navigation: {
     home: HomeLogo,
     calender: CalendarLogo,

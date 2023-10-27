@@ -1,13 +1,15 @@
 import "./Home.scss";
 import { images } from "../../config/images";
 import StoryCard from "../../components/StoryCard/StoryCard";
-import LeftIndicator from "../../components/LeftIndicator/LeftIndicator";
 import SeeMoreBtn from "../../components/SeeMoreBtn/SeeMoreBtn";
 import Oval from "../../components/Oval/Oval";
 import RightArrow from "../../components/RightArrow/RightArrow";
 import AddFrdSvg from "../../components/AddFrdSvg/AddFrdSvg";
 import TickSvg from "../../components/TickSvg/TickSvg";
 import LeftSidebar from "../../components/LeftSidebar/LeftSidebar";
+import RightPanel from "../../components/RightPanel/RightPanel";
+import ProfileNotification from "../../components/ProfileNotification/ProfileNotification";
+import Title from "../../components/Title/Title";
 
 const Home = () => {
   const users = [
@@ -162,107 +164,95 @@ const Home = () => {
           </div>
         </div>
       </div>
-      <div className="home_right_panel">
-        <div className="left_indicator">
-          <LeftIndicator />
-        </div>
-        <div className="right_panel">
-          <div className="profile_notifications">
-            <div className="notification">1</div>
-            <img
-              className="profile_pic"
-              src={images.profilePic}
-              alt="Profile Pic"
+      <RightPanel>
+        <ProfileNotification />
+        <div className="premium_card">
+          <div className="premium_card_wrapper">
+            <div className="premium_text">Go Premium!</div>
+            <div className="premium_desc">
+              Try premium membership and enjoy a full experience of our
+              community.
+            </div>
+            <SeeMoreBtn
+              style={{
+                backgroundColor: "rgba(30, 31, 32, 0.20)",
+                color: "#fff",
+              }}
+              invert
             />
           </div>
-          <div className="premium_card">
-            <div className="premium_card_wrapper">
-              <div className="premium_text">Go Premium!</div>
-              <div className="premium_desc">
-                Try premium membership and enjoy a full experience of our
-                community.
-              </div>
-              <SeeMoreBtn
-                style={{
-                  backgroundColor: "rgba(30, 31, 32, 0.20)",
-                  color: "#fff",
-                }}
-                invert
-              />
-            </div>
-            <div className="red_oval">
-              <Oval
-                style={{ height: "1.9rem", width: "1.9rem" }}
-                radius="0.95rem"
-                fill="rgba(30, 31, 32, 0.20)"
-              />
-            </div>
-            <div className="green_oval">
-              <Oval
-                style={{
-                  height: "8.7rem",
-                  width: "8.7rem",
-                }}
-                radius="4.35rem"
-                fill="#53D769"
-              />
-            </div>
-            <div className="blue_oval">
-              <Oval
-                style={{
-                  height: "27.7rem",
-                  width: "27.7rem",
-                }}
-                radius="13.85rem"
-                fill="#79D0F1"
-              />
-            </div>
+          <div className="red_oval">
+            <Oval
+              style={{ height: "1.9rem", width: "1.9rem" }}
+              radius="0.95rem"
+              fill="rgba(30, 31, 32, 0.20)"
+            />
           </div>
-          <div className="who_to_follow">
-            <div className="title">Who to Follow</div>
-            <div className="recommend_follow">
-              {users.map(({ address, name, profileImage }) => {
-                return (
-                  <div className="user">
-                    <img
-                      className="profile_pic"
-                      src={profileImage}
-                      alt="profile pic"
-                    />
-                    <div className="name_address">
-                      <div className="name">{name}</div>
-                      <div className="address">{address}</div>
-                    </div>
-                    <div className="add_frd_btn">
-                      <AddFrdSvg />
-                    </div>
-                  </div>
-                );
-              })}
-            </div>
-            <div className="see_more">
-              <div className="see_more_text">SEE MORE</div>
-              <RightArrow />
-            </div>
+          <div className="green_oval">
+            <Oval
+              style={{
+                height: "8.7rem",
+                width: "8.7rem",
+              }}
+              radius="4.35rem"
+              fill="#53D769"
+            />
           </div>
-          <div className="friends">
-            <div className="title">Friends</div>
-            <div className="users">
-              {images.friends.map((val) => {
-                return (
-                  <div className="user">
-                    <img className="profile_pic" src={val} alt="profile pic" />
-                    <div className="name">MadeInAmerica</div>
-                    <div className="tick_btn">
-                      <TickSvg />
-                    </div>
-                  </div>
-                );
-              })}
-            </div>
+          <div className="blue_oval">
+            <Oval
+              style={{
+                height: "27.7rem",
+                width: "27.7rem",
+              }}
+              radius="13.85rem"
+              fill="#79D0F1"
+            />
           </div>
         </div>
-      </div>
+        <div className="who_to_follow">
+          <Title label="Who to Follow" />
+          <div className="recommend_follow">
+            {users.map(({ address, name, profileImage }) => {
+              return (
+                <div className="user">
+                  <img
+                    className="profile_pic"
+                    src={profileImage}
+                    alt="profile pic"
+                  />
+                  <div className="name_address">
+                    <div className="name">{name}</div>
+                    <div className="address">{address}</div>
+                  </div>
+                  <div className="add_frd_btn">
+                    <AddFrdSvg />
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+          <div className="see_more">
+            <div className="see_more_text">SEE MORE</div>
+            <RightArrow />
+          </div>
+        </div>
+        <div className="friends">
+          <Title label="Friends" />
+          <div className="users">
+            {images.friends.map((val) => {
+              return (
+                <div className="user">
+                  <img className="profile_pic" src={val} alt="profile pic" />
+                  <div className="name">MadeInAmerica</div>
+                  <div className="tick_btn">
+                    <TickSvg />
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      </RightPanel>
     </div>
   );
 };
