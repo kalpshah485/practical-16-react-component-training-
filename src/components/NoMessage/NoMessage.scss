@@ -1,0 +1,49 @@
+.empty_message {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 1.6rem;
+  height: 58.4rem;
+  color: #8f92a1;
+}
+.email_svg_container {
+  height: 16rem;
+  width: 16rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5rem;
+  margin-bottom: 2rem;
+  background-color: #f7f7f7;
+}
+.top_message {
+  font-family: SF Pro Display;
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 3.6rem;
+  margin-bottom: 1rem;
+}
+.center_message {
+  font-family: SF Pro Display;
+  font-size: 1.4rem;
+  font-weight: 500;
+  line-height: 2rem;
+}
+.bottom_message {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+  align-items: center;
+  margin-top: auto;
+  margin-bottom: 0;
+  font-family: SF Pro Display;
+  font-size: 1.4rem;
+  line-height: 2rem;
+  .download_btn {
+    padding: 0;
+    color: #1e1f20;
+    background-color: transparent;
+
+  }
+}
