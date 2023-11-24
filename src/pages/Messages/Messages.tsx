@@ -1,8 +1,12 @@
+import React from "react";
 import LeftSidebar from "../../components/LeftSidebar/LeftSidebar";
+import Message from "../../components/Message/Message";
 import MessageSvg from "../../components/MessageSvg/MessageSvg";
+import NavTabWithDot from "../../components/NavTabWithDot/NavTabWithDot";
 import NoMessage from "../../components/NoMessage/NoMessage";
 import ProfileNotification from "../../components/ProfileNotification/ProfileNotification";
 import RightPanel from "../../components/RightPanel/RightPanel";
+import constants from "../../config/constants";
 import { images } from "../../config/images";
 import "./Messages.scss";
 
@@ -30,23 +34,13 @@ const Messages = () => {
         </div>
         <div className="message_title_box">
           <div className="inbox_title">Inbox</div>
-          <div className="navtab">
-            <div className="nav_item active">
-              <div className="nav_text">Direct Messages</div>
-              <div className="dot"></div>
-            </div>
-            <div className="nav_item">
-              <div className="nav_text">Group Chat</div>
-              <div className="dot"></div>
-            </div>
-            <div className="nav_item">
-              <div className="nav_text">Archived</div>
-              <div className="dot"></div>
-            </div>
-          </div>
+          <NavTabWithDot navTabItems={constants.navTabItems} />
         </div>
         <div className="messages_container">
-          <div className="message_container">
+          {React.Children.toArray(
+            images.msgUsers.map((img_url) => <Message img_url={img_url} />)
+          )}
+          {/* <div className="message_container">
             <div className="left">
               <div className="profile">
                 <img src={images.profilePhoto} alt="Profile Photo" />
@@ -173,7 +167,7 @@ const Messages = () => {
               <div className="time">3:03pm</div>
               <div className="pending_messages">1</div>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
       <RightPanel>

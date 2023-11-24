@@ -1,0 +1,187 @@
+.user_profile_layout {
+  display: flex;
+  width: 100vw;
+  .home_right_panel {
+    width: 80rem;
+    .right_panel {
+      width: 78.5rem;
+      background-color: #fff;
+      display: flex;
+      flex-direction: column;
+      .right_panel_nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 4.5rem;
+        .profile_notifications {
+          margin-bottom: 0;
+        }
+      }
+      .posts {
+        overflow: auto;
+        position: relative;
+        width: 69.4rem;
+        height: calc(100vh - 13.8rem);
+        margin: 0 auto;
+      }
+      .posts::-webkit-scrollbar {
+        display: none;
+      }
+    }
+  }
+  .user_profile_main {
+    margin: 0 auto;
+    padding: 4rem 6.5rem;
+    .back_btn {
+      background-color: rgba(143, 146, 161, 0.2);
+    }
+    .user_profile_card_wrapper {
+      width: 34.5rem;
+      height: 84.6rem;
+      border-radius: 1.2rem;
+      background: #fff;
+      height: calc(100vh - 17.8rem);
+      padding: 4rem 3rem;
+      overflow: auto;
+      .user_profile_card {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 3rem;
+        .user_profile_img {
+          width: 10.8rem;
+          height: 10.8rem;
+          border-radius: 3.6rem;
+        }
+        .full_name {
+          color: #1e1f20;
+          text-align: center;
+          font-family: SF Pro Display;
+          font-size: 3rem;
+          font-weight: 700;
+          line-height: 3.6rem;
+        }
+        .user_name {
+          color: #8f92a1;
+          text-align: center;
+          font-family: SF Pro Display;
+          font-size: 1.4rem;
+          font-weight: 400;
+          line-height: 2.2rem;
+        }
+      }
+      .counter_wrapper {
+        display: flex;
+        gap: 3rem;
+        justify-content: center;
+        margin-bottom: 3rem;
+        .counter {
+          display: flex;
+          gap: 0.5rem;
+          .count {
+            color: #1e1f20;
+            font-family: SF Pro Display;
+            font-size: 1.6rem;
+            font-weight: 700;
+            line-height: 2.2rem;
+          }
+          .label {
+            color: #8f92a1;
+            font-family: SF Pro Display;
+            font-size: 1.6rem;
+            font-weight: 700;
+            line-height: 2.2rem;
+          }
+        }
+      }
+      .buttons_wrapper {
+        display: flex;
+        gap: 2rem;
+        align-items: center;
+        margin-bottom: 4rem;
+        button {
+          background-color: inherit;
+          border: none;
+          padding: 0;
+        }
+        .frds_btn {
+          width: 14.9rem;
+          height: 5.8rem;
+          background-color: #53d769;
+          border-radius: 1.2rem;
+          display: flex;
+          gap: 1rem;
+          justify-content: center;
+          align-items: center;
+          .label {
+            color: #fff;
+            font-family: SF Pro Display;
+            font-size: 1.4rem;
+            font-weight: 700;
+            line-height: 2rem;
+          }
+        }
+        .msg_btn {
+          height: 4.8rem;
+          width: 4.8rem;
+        }
+        .option_btn {
+          width: 4.8rem;
+          height: 4.8rem;
+          border-radius: 1.2rem;
+          border: 2px solid rgba(143, 146, 161, 0.2);
+        }
+      }
+      .about_wrapper {
+        margin-bottom: 5rem;
+        .label {
+          color: #1e1f20;
+          font-family: SF Pro Display;
+          font-size: 1.2rem;
+          font-weight: 700;
+          line-height: 2rem;
+          letter-spacing: 0.1rem;
+          text-transform: uppercase;
+          margin-bottom: 1rem;
+        }
+        .description {
+          color: #8f92a1;
+          font-family: SF Pro Display;
+          font-size: 1.4rem;
+          font-weight: 400;
+          line-height: 2.2rem;
+        }
+      }
+      .friends_wrapper {
+        .label {
+          margin-bottom: 2rem;
+          color: #1e1f20;
+          font-family: SF Pro Display;
+          font-size: 1.6rem;
+          font-weight: 700;
+          line-height: 2.2rem;
+        }
+        .frd_grid {
+          display: grid;
+          grid-template-columns: repeat(5, 1fr);
+          gap: 1rem;
+          .frd_photo {
+            height: 4.5rem;
+            width: 4.5rem;
+          }
+        }
+      }
+    }
+    .user_profile_card_wrapper::-webkit-scrollbar {
+      display: none;
+    }
+  }
+  @media screen and (min-width: 1801px) {
+    .home_right_panel {
+      width: 100rem;
+      .right_panel {
+        width: inherit;
+      }
+    }
+  }
+}

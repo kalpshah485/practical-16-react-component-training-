@@ -10,6 +10,7 @@ import LeftSidebar from "../../components/LeftSidebar/LeftSidebar";
 import RightPanel from "../../components/RightPanel/RightPanel";
 import ProfileNotification from "../../components/ProfileNotification/ProfileNotification";
 import Title from "../../components/Title/Title";
+import React from "react";
 
 const Home = () => {
   const users = [
@@ -21,13 +22,18 @@ const Home = () => {
     {
       name: "Cammy Hedling",
       address: "Los Angeles, CA",
-      profileImage: images.profilePhoto,
+      profileImage: images.msgUsers[4],
     },
     {
       name: "Cammy Hedling",
       address: "Los Angeles, CA",
-      profileImage: images.profilePhoto,
+      profileImage: images.msgUsers[7],
     },
+  ];
+  const friends: string[] = [
+    images.msgUsers[6],
+    images.friends[9],
+    images.friends[10],
   ];
   return (
     <div className="home_layout">
@@ -212,24 +218,26 @@ const Home = () => {
         <div className="who_to_follow">
           <Title label="Who to Follow" />
           <div className="recommend_follow">
-            {users.map(({ address, name, profileImage }) => {
-              return (
-                <div className="user">
-                  <img
-                    className="profile_pic"
-                    src={profileImage}
-                    alt="profile pic"
-                  />
-                  <div className="name_address">
-                    <div className="name">{name}</div>
-                    <div className="address">{address}</div>
+            {React.Children.toArray(
+              users.map(({ address, name, profileImage }) => {
+                return (
+                  <div className="user">
+                    <img
+                      className="profile_pic"
+                      src={profileImage}
+                      alt="profile pic"
+                    />
+                    <div className="name_address">
+                      <div className="name">{name}</div>
+                      <div className="address">{address}</div>
+                    </div>
+                    <div className="add_frd_btn">
+                      <AddFrdSvg />
+                    </div>
                   </div>
-                  <div className="add_frd_btn">
-                    <AddFrdSvg />
-                  </div>
-                </div>
-              );
-            })}
+                );
+              })
+            )}
           </div>
           <div className="see_more">
             <div className="see_more_text">SEE MORE</div>
@@ -239,17 +247,19 @@ const Home = () => {
         <div className="friends">
           <Title label="Friends" />
           <div className="users">
-            {images.friends.map((val) => {
-              return (
-                <div className="user">
-                  <img className="profile_pic" src={val} alt="profile pic" />
-                  <div className="name">MadeInAmerica</div>
-                  <div className="tick_btn">
-                    <TickSvg />
+            {React.Children.toArray(
+              friends.map((val) => {
+                return (
+                  <div className="user">
+                    <img className="profile_pic" src={val} alt="profile pic" />
+                    <div className="name">MadeInAmerica</div>
+                    <div className="tick_btn">
+                      <TickSvg />
+                    </div>
                   </div>
-                </div>
-              );
-            })}
+                );
+              })
+            )}
           </div>
         </div>
       </RightPanel>

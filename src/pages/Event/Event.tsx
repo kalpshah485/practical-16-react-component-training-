@@ -1,6 +1,6 @@
+import BackButton from "../../components/BackButton/BackButton";
 import ClockSvg from "../../components/ClockSvg/ClockSvg";
 import DollarSvg from "../../components/DollarSvg/DollarSvg";
-import LeftArrow from "../../components/LeftArrow/LeftArrow";
 import LeftIndicator from "../../components/LeftIndicator/LeftIndicator";
 import LeftSidebar from "../../components/LeftSidebar/LeftSidebar";
 import MapSvg from "../../components/MapSvg/MapSvg";
@@ -13,18 +13,13 @@ import { images } from "../../config/images";
 import "./Event.scss";
 
 const Event = () => {
-  const friends = [...images.friends, ...images.friends];
+  const friends = [...images.friendsInterested];
   return (
     <div className="home_layout bg_blue">
       <LeftSidebar />
       <LeftIndicator />
       <div className="main_panel">
-        <button className="back_btn">
-          <div className="back_btn_content">
-            <LeftArrow />
-            <div className="back_btn_content_text">Back</div>
-          </div>
-        </button>
+        <BackButton />
         <div className="user_options">
           <div className="user_wrapper">
             <img

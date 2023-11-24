@@ -36,7 +36,7 @@ const LeftSidebar = () => {
             />
           </div>
         </Link>
-        <Link to="/user">
+        <Link to="/user-profile">
           <div className="navigation_logo_wrapper">
             <img
               className="nav_logo"
@@ -45,7 +45,7 @@ const LeftSidebar = () => {
             />
           </div>
         </Link>
-        <Link to="/settings">
+        <Link to="/">
           <div className="navigation_logo_wrapper">
             <img
               className="nav_logo"

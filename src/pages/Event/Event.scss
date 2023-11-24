@@ -15,27 +15,6 @@
     background-color: #ffffff;
     padding: 4rem 9rem 6.2rem 8rem;
     overflow: auto;
-    .back_btn {
-      width: 10.3rem;
-      height: 5.8rem;
-      padding: 2rem;
-      border: none;
-      border-radius: 1.2rem;
-      background-color: #f7f7f7;
-      margin-bottom: 4rem;
-      &_content {
-        display: flex;
-        align-items: center;
-        gap: 1rem;
-        &_text {
-          font-family: SF Pro Display;
-          font-size: 1.4rem;
-          font-weight: 700;
-          line-height: 2rem;
-          color: #8f92a1;
-        }
-      }
-    }
     .user_options {
       display: flex;
       align-items: center;
